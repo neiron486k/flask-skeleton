@@ -1,4 +1,4 @@
-from app import db
+from bucket.feature.orm import db
 from .common import Entity
 
 

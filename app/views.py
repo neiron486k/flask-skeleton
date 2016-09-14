@@ -1,4 +1,4 @@
-from app import app
+from app.bootstrap import app
 from app.services.user_service import UserService
 from flask import jsonify
 from app.models.user import User

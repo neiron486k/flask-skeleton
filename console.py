@@ -1,8 +1,8 @@
 #!env/bin/python
-from app import app
-from app import db
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
+from app.bootstrap import app
+from bucket.feature.orm import db
 
 migrate = Migrate(app, db)
 manager = Manager(app)
