@@ -2,3 +2,7 @@ flask
 Flask-Migrate
 Flask-MySQL
 Flask-SQLAlchemy
+Flask-Login
+Flask-OpenID
+Flask-WTF
+Flask-DebugToolbar
