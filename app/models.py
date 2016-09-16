@@ -1,11 +1,14 @@
 from bucket.feature.orm import db
-from .common import Entity
 
 
-class User(Entity, db.Model):
+class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nickname = db.Column(db.String(64), index=True, unique=True)
     email = db.Column(db.String(120), index=True, unique=True)
+
+    def __init__(self, data={}):
+        for key in data.keys():
+            self.__dict__[key] = data[key]
 
     @property
     def is_authenticated(self):
